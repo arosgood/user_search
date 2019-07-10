@@ -7,7 +7,7 @@ import numpy as np
 
 class Inventory(object):
     
-    def __init__(self, con = psycopg2.connect(dbname= ----, host=----, port= ----, user= ----, password= ----)):
+    def __init__(self, con = psycopg2.connect(-)):
         self.con = con
     
     def initiate(self):
@@ -20,7 +20,7 @@ class Inventory(object):
             exit()
 
     def org(self):
-        org_sql_command = "Select ---- FROM ---- LEFT JOIN ---- ON ---- = ---- LEFT JOIN ---- ON ---- = ---- WHERE"
+        org_sql_command = "-"
         org_name = self.__promptOrg__()
         org_sql_command = org_sql_command + ' ' + org_name
         print('List of users in this organization: ')
@@ -30,8 +30,8 @@ class Inventory(object):
         exit()
 
     def individ(self):
-        sql_command = 'Select ---- FROM ---- WHERE'
-        sql_command_org_info = "Select ----, name FROM ---- LEFT JOIN ---- ON ---- = ---- LEFT JOIN ---- ON ---- = ---- WHERE"
+        sql_command = '-'
+        sql_command_org_info = "-"
         names = self.__promptUser__()
         sql_command = sql_command + ' ' + names
         sql_command_org_info = sql_command_org_info + ' ' + names
